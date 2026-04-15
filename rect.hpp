@@ -9,4 +9,7 @@ public:
     
     double Obsah() override;
     double Obvod() override;
+
+    std::string Rozmery() override;
+    std::string Info() override;
 };

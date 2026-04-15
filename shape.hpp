@@ -3,11 +3,16 @@
 #include <iostream>
 
 class Shape {
+protected:
+    double a, b, r;
+
 public:
-    virtual ~Shape() {}
+    Shape();
+    virtual ~Shape();
 
-    virtual double Obsah() = 0;
-    virtual double Obvod() = 0;
+    virtual double Obsah();
+    virtual double Obvod();
 
-    virtual void Info();
+    virtual std::string Rozmery();
+    virtual std::string Info();
 };

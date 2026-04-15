@@ -6,17 +6,17 @@
 #include "circle.hpp"
 #include "square.hpp"
 
+using namespace std;
+
 int main() {
-    std::vector<Shape*> shapes;
+    vector<Shape*> shapes;
 
     shapes.push_back(new Rect(4.0, 5.0));
     shapes.push_back(new Circle(3.0));
     shapes.push_back(new Square(2.0));
 
     for (auto* shape : shapes) {
-        shape->Info();
-        std::cout << " -> Obsah: " << shape->Obsah() 
-                  << ", Obvod: " << shape->Obvod() << std::endl;
+        cout << shape->Info() << ", Obsah: " << shape->Obsah() << ", Obvod: " << shape->Obvod() << endl;
     }
 
     for (auto* shape : shapes) {
